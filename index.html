@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>MapTalk Copenhagen JS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black_custom.css">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+				div.widget-map-copyright > a {
+					font-size: 12px;
+				}
+			div.widget-map-copyright > span {
+				font-size: 12px;
+			}
+			div.widget-map-copyright {
+				height: 24px;
+				line-height: 0;
+			}
+		</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			html, body {
+				font-family: 'Open Sans';
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+						<section
+							class="on-image"
+							data-background="./assets/Unsplash/annie-spratt-223429-unsplash.jpg"
+						>
+							<h1>How we make maps at Septima</h1></section>
+						<section
+							class="on-image"
+							data-background="./assets/Unsplash/annie-spratt-223429-unsplash.jpg"
+						>
+							<h1>Agenda</h1>
+								<ul>
+									<li>Septima</li>
+									<li>Maps on the web</li>
+									<li>Open geodata</li>
+									<li>Frontend frameworks</li>
+									<li>Septima Map</li>
+								</ul>
+						</section>
+				</section>
+
+				<section>
+						<section
+							data-background="./assets/0-intro/bicycles.jpg"
+							class="on-image"
+							>
+							<h1>Septima P/S</h1>
+						</section>
+						<section
+							data-background="./assets/0-intro/orto.jpg"
+							class="on-image"
+							>
+								<p>
+									18 employees
+								</p>
+									<ul>
+											<li>Developers</li>
+											<li>Designers</li>
+											<li>Geo-Information Specialists</li>
+									</ul>
+						</section>
+					<section
+						data-background="./assets/shaka/2.jpg"
+						class="on-image"
+					>
+							<p>@haakseth</p>
+							<p>🇳🇴</p>
+							<p>🐶</p>
+							<p>🏐</p>
+							<p>🌎 💻 🌍 ☕️ 🌏 </p>
+					</section>
+				</section>
+
+				<section>
+					<section
+						data-background="./assets/maps/simon-migaj-547079-unsplash.jpg"
+						class="on-image"
+					>
+						<h1>Maps on the web</h1>
+					</section>
+					<section
+						data-background="./assets/maps/3-labels.jpeg"
+						class="on-image"
+					>
+						<h1>Basemaps and overlays</h1>
+					</section>
+					<section data-background="./assets/maps/1-basemap.png"></section>
+					<section data-background="./assets/maps/2-roads.jpeg"></section>
+					<section data-background="./assets/maps/3-labels.jpeg"></section>
+					<section data-background="./assets/maps/rawpixel-539830-unsplash.jpg" class="on-image"><h1>Tiles, tiles, tiles!</h1></section>
+					<section>
+						<table>
+							<tr>
+								<td style="border-bottom: none; padding: 0;"></td>
+								<td style="border-bottom: none; padding: 0;"></td>
+								<td style="border-bottom: none; padding: 0;"></td>
+							 </tr>
+							 <tr>
+								 <td style="border-bottom: none; padding: 0;"></td>
+								 <td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_005.jpg" width="256" style="margin:0; padding:0; border:none;"></td>
+								 <td style="border-bottom: none; padding: 0;"></td>
+								</tr>
+								<tr>
+									<td style="border-bottom: none; padding: 0;"></td>
+									<td style="border-bottom: none; padding: 0;"></td>
+									<td style="border-bottom: none; padding: 0;"></td>
+								 </tr>
+						</table>
+					</section>
+					<section>
+						<table>
+							<tr>
+								<td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_001.jpg" width="256" style="margin:0; padding:0; border:none;"></td>
+								<td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_002.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+								<td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_003.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+							 </tr>
+							 <tr>
+								 <td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_004.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+								 <td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_005.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+								 <td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_006.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+								</tr>
+								<tr>
+									<td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_007.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+									<td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_008.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+									<td style="border-bottom: none; padding: 0;"><img src="assets/maps/image_part_009.jpg" width="256" style="margin:0; padding:0; border:none"></td>
+								 </tr>
+						</table>
+					</section>
+					<section>
+						<h3>Raster tiles</h3>
+						<video controls autoplay loop>
+							<source src="./assets/maps/tiles.mp4" type="video/mp4">
+						</video>
+					</section>
+					<section>
+							<h2>Vector tiles</h2>
+						<video controls autoplay loop>
+							<source src="./assets/maps/vectortiles.mp4" type="video/mp4">
+						</video>
+					</section>
+				</section>
+
+				<section>
+					<section><h1>Open data</h1></section>
+					<section
+					data-background="./assets/opendata/marius-christensen-708620-unsplash.jpg"
+					class="on-image"
+					>
+						<h2>Addresses</h2>
+					</section>
+					<section
+					data-background="./assets/opendata/dawa.jpeg"
+					class="on-image"
+					>
+					<h1>DAWA</h1>
+					<ul>
+						<li>Addresses</li>
+						<li>Regions and municipalities</li>
+						<li>Cadastre (properties) and BBR (buildings)</li>
+					</ul>
+					</section>
+					<section>
+						<img src="./assets/opendata/adresse.gif" />
+					</section>
+					<section
+						data-background="./assets/opendata/openstreetmap.jpeg"
+						class="on-image"
+					>
+						<h2>OpenStreetMap.org</h2>
+					</section>
+					<section
+						data-background="./assets/opendata/snapchat.jpeg"
+					>
+					</section>
+					<section data-background="./assets/opendata/ed-259-270914-unsplash.jpg"></section>
+					<section data-background="./assets/opendata/loberude.jpeg"></section>
+					<section
+						data-background="./assets/opendata/kortforsyningen.jpeg"
+						class="on-image"
+					>
+						<h2>Danish maps</h2>
+					</section>
+					<section data-background="./assets/opendata/Skjermkort.jpeg"></section>
+					<section data-background="./assets/opendata/Ortofoto.jpeg"></section>
+					<section data-background="./assets/opendata/skygge.jpeg"></section>
+					<section data-background="./assets/opendata/historisk.jpeg"></section>
+					<section
+						data-background="./assets/opendata/3d.jpeg"
+					>
+						<h2>3D data</h2>
+					</section>
+					<section data-background="./assets/opendata/lineofsight.jpeg"></section>
+					<section data-background="./assets/opendata/blender.jpeg"></section>
+				</section>
+
+				<section>
+					<section><h1>Frontend Frameworks</h1></section>
+					<section data-background="./assets/1-frameworks/openlayers.jpeg"></section>
+					<section data-background="./assets/1-frameworks/openlayers-03.jpg">
+						<p>The one your dad uses</p>
+					</section>
+					<section data-background="./assets/1-frameworks/leaflet.jpeg"></section>
+					<section data-background="./assets/1-frameworks/leaflet-03.jpg">
+						<ul>
+								<li>The one your hipster friend uses</li>
+								<!-- <li>Used by dr.dk</li> -->
+						</ul>
+					</section>
+					<section data-background="./assets/1-frameworks/mapbox.jpeg"></section>
+					<section data-background="./assets/1-frameworks/mapbox-03.jpg">
+						<ul>
+								<li>Born vector</li>
+								<li>Complete ecosystem</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Why not just use Google Maps and call it a day?</h1>
+					</section>
+					<section>That's a whole talk of itself</section>
+					<section data-background="./assets/google/DOT.jpeg"></section>
+					<section data-background="./assets/google/Rejseplan.jpeg"></section>
+					<section data-background="./assets/google/SKM.jpeg"></section>
+					<section>
+						... but we've got you covered
+					</section>
+				</section>
+				<section>
+					<section data-background="./assets/septimamap/bg.jpeg"></section>
+					<section data-background="./assets/septimamap/news.jpeg"></section>
+						<section data-background="./assets/septimamap/bg-03.jpg">
+							<ul>
+								<li>Plug-and-play</li>
+								<li>Free, no registration, no data quotas</li>
+								<li>Uses high quality Danish maps</li>
+							</ul>
+						</section>
+						<section>
+							<video controls>
+								<source src="./assets/septimamap/septimamap.mp4" type="video/mp4">
+							</video>
+						</section>
+					<section>
+							Reveal.js has css that disables the marker. Check out a live example at <a href="https://codepen.io/haakseth/pen/rqrBgR">Codepen</a>
+						<div septimamap-address="Emil Holms Kanal 20, 2300 København S"
+     septimamap-text="Copenhagen JS"
+     septimamap-zoom="8"
+     septimamap-pincolor="#e0e22a"
+     septimamap-layer="#dk_luftfoto">
+</div>
+<script src="https://septimamap.dk/septimamap.js"></script>
+					</section>
+				</section>
+				<section
+					data-background="./assets/shaka/1.jpg"
+				>
+					<h1>Thank you</h1>
+					<p>@haakseth</p>
+				</section>
+				<section>
+					<h1>Resources</h1>
+					<ul style="font-size: 20px;">
+						<li><a href="http://septima.dk/map">Septima Map</a></li>
+						<li><a href="https://kortforsyningen.dk/indhold/webtjenesteliste">Danish Mapping Authority web-services</a></li>
+						<li><a href="https://github.com/Kortforsyningen/Demo/tree/master/examples">Danish Mapping Authority examples</a></li>
+						<li><a href="https://download.kortforsyningen.dk/content/geodanmark">Danish Mapping Authority download</a></li>
+						<li><a href="https://download.kortforsyningen.dk/content/geodataprodukter?field_korttype_tid_1=440&field_aktualitet_tid=435&field_datastruktur_tid=All&field_scheme_tid=All">Danish Mapping Authority 3D-data</a></li>
+						<li><a href="https://dawa.aws.dk/">Danish Address API</a></li>
+						<li><a href="https://www.geofabrik.de/data/download.html">OpenStreetMap download</a></li>
+						<li><a href="https://codepen.io/haakseth/pen/rqYdoq">Simple Leaflet example</a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				progress: true,
+				history: true,
+				fragmentInURL: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
